@@ -1,0 +1,788 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    background-color: #77787B;
+    font-family: 'Figtree', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+form,
+figure,
+label {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #0F232F;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #0F232F;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-i {
+    display: flex;
+    align-items: center;
+}
+
+.flex-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.r-50 {
+    border-radius: 50%;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    padding: 10px 0 20px 0;
+}
+
+.logo-img {
+    width: 120px;
+    height: auto;
+}
+
+.carSec__h {
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 34px;
+}
+
+.carSec {
+    position: relative;
+    z-index: 0;
+    padding: 40px 0 115px 0;
+}
+
+.carSecBox {
+    position: relative;
+    z-index: 1;
+}
+
+.carSecBox__car {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.dotsHolder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.dot {
+    position: absolute;
+    z-index: 3;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    cursor: pointer;
+    animation: blink 2s infinite linear alternate-reverse;
+}
+
+@keyframes blink {
+    0% {
+        transform: scale(0.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.dot::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.dot.active {
+    animation: none;
+}
+
+.dot1 {
+    right: 15%;
+    top: 20%;
+    /* animation-delay: 0.1s; */
+}
+
+.dot2 {
+    right: 10%;
+    top: 35%;
+    animation-delay: 0.2s;
+}
+
+.dot3 {
+    right: 8%;
+    top: 43%;
+    animation-delay: 0.3s;
+}
+
+.dot4 {
+    right: 13%;
+    top: 56%;
+    animation-delay: 0.4s;
+}
+
+.dot5 {
+    right: 1%;
+    top: 57%;
+    animation-delay: 0.5s;
+}
+
+.dot6 {
+    right: 10%;
+    top: 67%;
+    animation-delay: 0.1s;
+}
+
+.dot7 {
+    right: 20%;
+    top: 70%;
+    animation-delay: 0.2s;
+}
+
+.dot8 {
+    right: 4%;
+    top: 79%;
+    animation-delay: 0.3s;
+}
+
+.dot9 {
+    right: 13%;
+    top: 83%;
+    animation-delay: 0.4s;
+}
+
+.dot10 {
+    right: 37%;
+    top: 31%;
+    animation-delay: 0.5s;
+}
+
+.dot11 {
+    right: 43%;
+    top: 23.5%;
+    animation-delay: 0.6s;
+}
+
+.dot12 {
+    right: 51%;
+    top: 12%;
+    animation-delay: 0.1s;
+}
+
+.dot13 {
+    right: 63%;
+    top: 20.5%;
+    animation-delay: 0.2s;
+}
+
+.dot14 {
+    right: 75.5%;
+    top: 29%;
+    animation-delay: 0.3s;
+}
+
+.dot15 {
+    right: 31%;
+    top: 53%;
+    animation-delay: 0.4s;
+}
+
+.dot16 {
+    right: 41%;
+    top: 46%;
+    animation-delay: 0.5s;
+}
+
+.dot17 {
+    right: 65%;
+    animation-delay: 0.6s;
+    top: 47.5%;
+}
+
+.dot18 {
+    right: 86%;
+    top: 47%;
+}
+
+.dot19 {
+    right: 56%;
+    top: 62%;
+    animation-delay: 0.1s;
+}
+
+.dot20 {
+    right: 37.5%;
+    animation-delay: 0.2s;
+    top: 76.5%;
+}
+
+.dot21 {
+    animation-delay: 0.3s;
+    right: 89.5%;
+    top: 83.5%;
+}
+
+.dotimg {
+    position: absolute;
+    left: 50%;
+    height: auto;
+    image-rendering: auto;
+    display: none;
+}
+
+.dot.active .dotimg {
+    display: block;
+}
+
+.dot1-img {
+    width: 104px;
+    bottom: 100%;
+}
+
+.dot2-img {
+    width: 160px;
+    bottom: 100%;
+}
+
+.dot3-img {
+    width: 215px;
+    bottom: 100%;
+}
+
+.dot4-img {
+    width: 232px;
+    top: 100%;
+    left: auto;
+    right: 50%;
+}
+
+.dot5-img {
+    width: 170px;
+    bottom: 50%;
+}
+
+.dot6-img {
+    width: 250px;
+    top: 3%;
+    bottom: auto;
+    left: 12px;
+}
+
+.dot7-img {
+    width: 210px;
+    top: 50%;
+    right: 12px;
+    left: auto;
+}
+
+.dot8-img {
+    width: 190px;
+    top: 50%;
+    bottom: auto;
+    left: 12px;
+}
+
+.dot9-img {
+    width: 270px;
+    top: 50%;
+    bottom: auto;
+    left: 12px;
+}
+
+.dot10-img {
+    width: 150px;
+    bottom: 70%;
+    left: auto;
+    right: -205%;
+}
+
+.dot11-img {
+    width: 140px;
+    bottom: 70%;
+    left: auto;
+    right: 50%;
+}
+
+.dot12-img {
+    width: 110px;
+    bottom: 70%;
+    left: auto;
+    right: 0%;
+}
+
+.dot13-img {
+    width: 130px;
+    bottom: 70%;
+    left: auto;
+    right: 50%;
+}
+
+.dot14-img {
+    width: 185px;
+    bottom: 70%;
+    left: auto;
+    right: 50%;
+}
+
+.dot15-img {
+    width: 150px;
+    bottom: 70%;
+    left: -200%;
+}
+
+.dot16-img {
+    width: 205px;
+    top: 50%;
+    left: auto;
+    right: 12px;
+}
+
+.dot17-img {
+    width: 310px;
+    top: 50%;
+    left: auto;
+    right: 12px;
+}
+
+.dot18-img {
+    width: 280px;
+    bottom: 50%;
+    left: auto;
+    right: 12px;
+}
+
+.dot19-img {
+    width: 280px;
+    top: 50%;
+    left: auto;
+    right: 12px;
+}
+
+.dot20-img {
+    width: 220px;
+    top: 50%;
+    left: auto;
+    right: 12px;
+}
+
+.dot21-img {
+    width: 220px;
+    bottom: auto;
+    top: 50%;
+    left: auto;
+    right: 12px;
+}
+
+.mobile {
+    display: none !important;
+}
+
+.carSec__img {
+    width: 120px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    z-index: 1;
+    top: auto;
+}
+
+@media(max-width:1399px) {
+    .container {
+        max-width: 900px;
+    }
+}
+
+@media(max-width:1199px) {
+    .carSec__img {
+        width: 100px;
+    }
+
+    .container {
+        max-width: 700px;
+    }
+
+    .dot2-img {
+        width: 157px;
+    }
+
+    .dot1-img {
+        width: 80px;
+    }
+
+    .dot3-img {
+        width: 180px;
+    }
+
+    .dot5-img {
+        width: 140px;
+    }
+
+    .dot6-img {
+        width: 200px;
+    }
+
+    .dot9-img {
+        width: 210px;
+    }
+
+    .dot8-img {
+        width: 142px;
+    }
+
+    .dot15-img {
+        width: 115px;
+    }
+
+    .dot10-img {
+        width: 98px;
+    }
+
+    .dot11-img {
+        width: 97px;
+    }
+
+    .dot12-img {
+        width: 83px;
+    }
+
+    .dot13-img {
+        width: 104px;
+    }
+
+    .dot14-img {
+        width: 140px;
+    }
+
+    .dot18-img {
+        width: 220px;
+    }
+
+    .dot21-img {
+        width: 192px;
+    }
+
+    .dot17-img {
+        width: 220px;
+    }
+
+    .dot19-img {
+        width: 220px;
+    }
+
+    .dot20-img {
+        width: 160px;
+    }
+
+    .dot16-img {
+        width: 150px;
+    }
+
+    .dot7-img {
+        width: 130px;
+    }
+
+    .dot4-img {
+        width: 169px;
+    }
+
+    .dot {
+        width: 18px;
+        height: 18px;
+    }
+
+    .dot::after {
+        width: 10px;
+        height: 10px;
+    }
+
+    .logo-img {
+        width: 90px;
+    }
+
+    .header {
+        padding: 15px 0 20px 0;
+    }
+
+    .carSec__h {
+        margin-bottom: 30px;
+        font-size: 30px;
+    }
+}
+
+@media(max-width:1023px) {
+    .carSec__img {
+        width: 80px;
+    }
+
+    .container {
+        max-width: 500px;
+    }
+
+    .dot {
+        width: 12px;
+        height: 12px;
+    }
+
+    .dot::after {
+        width: 6px;
+        height: 6px;
+    }
+
+    .dot15-img {
+        width: 90px;
+        left: -295%;
+    }
+
+    .dot10-img {
+        width: 80px;
+        left: -43px;
+    }
+
+    .dot1-img {
+        width: 66px;
+    }
+
+    .dot2-img {
+        width: 145px;
+    }
+
+    .dot3-img {
+        width: 148px;
+        left: 9px;
+    }
+
+    .dot5-img {
+        width: 116px;
+        left: 9px;
+    }
+
+    .dot6-img {
+        width: 159px;
+    }
+
+    .dot9-img {
+        width: 160px;
+        left: 7px;
+    }
+
+    .dot8-img {
+        width: 111px;
+        left: 6px;
+    }
+
+    .dot4-img {
+        width: 144px;
+    }
+
+    .dot7-img {
+        width: 101px;
+        right: 5px;
+    }
+
+    .dot20-img {
+        width: 112px;
+        right: 6px;
+    }
+
+    .dot19-img {
+        width: 174px;
+        right: 5px;
+    }
+
+    .dot17-img {
+        width: 170px;
+        right: 5px;
+    }
+
+    .dot21-img {
+        width: 140px;
+        right: 6px;
+    }
+
+    .dot18-img {
+        width: 165px;
+    }
+
+    .dot16-img {
+        width: 105px;
+    }
+
+    .dot14-img {
+        width: 109px;
+    }
+
+    .dot13-img {
+        width: 86px;
+    }
+
+    .dot12-img {
+        width: 62px;
+    }
+
+    .dot11-img {
+        width: 75px;
+    }
+}
+
+@media(max-width:767px) {
+    .container {
+        max-width: 320px;
+        padding: 0 10px;
+    }
+
+    .carSec__h {
+        margin-bottom: 40px;
+        font-size: 20px;
+    }
+
+    .dot {
+        width: 7px;
+        height: 7px;
+    }
+
+    .dot::after {
+        width: 7px;
+        height: 7px;
+    }
+
+    .dot15-img {
+        width: 87px;
+        left: -30px;
+
+    }
+
+
+    .web {
+        display: none !important;
+    }
+
+    .dot.active .dot1-img {
+        display: block !important;
+    }
+
+    .dot.active .dotimg.mobile {
+        display: block !important;
+    }
+
+    .dot2-img {
+        width: 99px;
+    }
+
+    .dot3-img {
+        width: 101px;
+        left: 6px;
+    }
+
+    .dot5-img {
+        width: 85px;
+        left: 3px;
+    }
+
+    .dot6-img {
+        width: 115px;
+        left: 0;
+        top: -11px;
+    }
+
+    .dot8-img {
+        width: 90px;
+        left: 4px;
+    }
+
+    .dot9-img {
+        width: 113px;
+        left: 2px;
+    }
+
+    .dot14-img {
+        width: 96px;
+    }
+
+    .dot18-img {
+        width: 85px;
+        right: 2px;
+    }
+
+    .dot19-img {
+        width: 172px;
+        right: 2px;
+    }
+
+    .dot21-img {
+        width: 85px;
+        right: 0;
+    }
+
+    .dot17-img {
+        width: 143px;
+        right: 3px;
+    }
+
+    .dot4-img {
+        width: 145px;
+    }
+
+    .carSec__img {
+        width: 50px;
+    }
+
+    .carSec {
+        transform: rotate(90deg);
+        padding: 90px 0;
+    }
+
+    .dot16-img {
+        right: 2px;
+    }
+}
