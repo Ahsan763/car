@@ -786,3 +786,43 @@ a:hover {
         right: 2px;
     }
 }
+
+@media (max-width: 740px) and (max-height: 360px) {
+    .carSec {
+        transform: rotate(0deg);
+        padding: 35px 0;
+    }
+
+    .container {
+        max-width: 400px;
+    }
+
+    .header {
+        padding: 5px 0 5px 0;
+    }
+
+    .carSec__h {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 1040px) and (max-height: 560px) {
+    .carSec {
+        transform: rotate(0deg);
+        padding: 35px 0;
+    }
+
+    .container {
+        max-width: 400px;
+    }
+
+    .header {
+        padding: 5px 0 5px 0;
+    }
+
+    .carSec__h {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+}
