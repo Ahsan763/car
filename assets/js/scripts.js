@@ -3,11 +3,11 @@ $(Document).ready(function () {
     $(this).prevAll(".dot").removeClass("active");
     $(this).addClass("active");
     $(this).nextAll(".dot").removeClass("active");
-    $(".carSec__h").addClass("active");
+    // $(".carSec__h").addClass("active");
     event.stopPropagation();
   });
   $("body").click(function () {
     $(".dot").removeClass("active");
-    $(".carSec__h").removeClass("active");
+    // $(".carSec__h").removeClass("active");
   });
 });

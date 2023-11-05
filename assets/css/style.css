@@ -94,7 +94,7 @@ a:hover {
 .carheading {
     position: absolute;
     width: 100%;
-    top: 0;
+    top: -18px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
@@ -110,7 +110,7 @@ a:hover {
 }
 
 .carSec__h.active {
-    transform: scale(0);
+    /* transform: scale(0); */
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
@@ -149,7 +149,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: 1px solid #fff;
+    border: 1px solid #f41b1b;
     cursor: pointer;
     animation: blink 2s infinite linear alternate-reverse;
 }
@@ -177,7 +177,7 @@ a:hover {
     transform: translate(-50%, -50%);
     width: 12px;
     height: 12px;
-    background-color: #fff;
+    background-color: #f41b1b;
     border-radius: 50%;
 }
 
@@ -483,13 +483,114 @@ a:hover {
 
 @media(width<=1399px) {
     .container {
-        max-width: 900px;
+        max-width: 770px;
+    }
+
+    .header {
+        padding: 10px 0 10px 0;
+    }
+
+    .carholder {
+        min-height: calc(100vh - 62px);
+    }
+
+    .carSec__h {
+        font-size: 28px;
+    }
+
+    .dot1-img {
+        width: 106px;
+    }
+
+    .dot10-img {
+        width: 125px;
+    }
+
+    .dot2-img {
+        width: 160px;
+    }
+
+    .dot3-img {
+        width: 175px;
+    }
+
+    .dot5-img {
+        width: 160px;
+    }
+
+    .dot8-img {
+        width: 160px;
+    }
+
+    .dot9-img {
+        width: 200px;
+    }
+
+    .dot7-img {
+        width: 175px;
+    }
+
+    .dot20-img {
+        width: 165px;
+    }
+
+    .dot15-img {
+        width: 119px;
+        left: -32px;
+    }
+
+    .dot18-img {
+        width: 217px;
+    }
+
+    .dot21-img {
+        width: 175px;
+    }
+
+    .carSec__img {
+        width: 80px;
+    }
+
+    .dot19-img {
+        width: 220px;
+    }
+
+    .dot16-img {
+        width: 160px;
+    }
+
+    .dot11-img {
+        width: 120px;
+    }
+
+    .dot12-img {
+        width: 110px;
+    }
+
+    .dot13-img {
+        width: 120px;
+    }
+
+    .dot14-img {
+        width: 158px;
+    }
+
+    .dot17-img {
+        width: 239px;
+    }
+
+    .dot6-img {
+        width: 216px;
+    }
+
+    .dot4-img {
+        width: 160px;
     }
 }
 
 @media(width<=1199px) {
     .container {
-        max-width: 800px;
+        max-width: 700px;
     }
 
     .header {
@@ -505,11 +606,7 @@ a:hover {
     }
 
     .carSec__h {
-        font-size: 28px;
-    }
-
-    .carSec__img {
-        width: 100px;
+        font-size: 25px;
     }
 
     .dot {
@@ -523,97 +620,97 @@ a:hover {
     }
 
     .dot1-img {
-        width: 110px;
+        width: 90px;
     }
 
     .dot2-img {
-        width: 175px;
+        width: 140px;
         left: 12px;
     }
 
     .dot3-img {
-        width: 177px;
+        width: 160px;
         bottom: 11px;
     }
 
     .dot4-img {
-        width: 175px;
+        width: 145px;
     }
 
     .dot5-img {
-        width: 126px;
+        width: 115px;
     }
 
     .dot6-img {
-        width: 190px;
+        width: 180px;
     }
 
     .dot7-img {
-        width: 165px;
+        width: 137px;
         right: 7px;
     }
 
     .dot8-img {
-        width: 150px;
+        width: 140px;
         left: 7px;
     }
 
     .dot9-img {
-        width: 220px;
+        width: 177px;
         left: 7px;
     }
 
     .dot10-img {
-        width: 130px;
-        right: -51px;
+        width: 114px;
+        right: -43px;
     }
 
     .dot11-img {
-        width: 120px;
+        width: 100px;
     }
 
     .dot12-img {
-        width: 120px;
+        width: 85px;
     }
 
     .dot13-img {
-        width: 120px;
+        width: 100px;
     }
 
     .dot14-img {
-        width: 165px;
+        width: 135px;
     }
 
     .dot15-img {
-        width: 125px;
-        left: -39px;
+        width: 105px;
+        left: -31px;
     }
 
     .dot16-img {
-        width: 170px;
+        width: 145px;
         right: 8px;
     }
 
     .dot17-img {
-        width: 260px;
+        width: 210px;
         right: 8px;
     }
 
     .dot18-img {
-        width: 205px;
+        width: 195px;
     }
 
     .dot19-img {
-        width: 240px;
+        width: 200px;
     }
 
     .dot20-img {
-        width: 180px;
+        width: 150px;
         right: 7px;
     }
 
     .dot21-img {
-        width: 177px;
+        width: 140px;
     }
 
 }
@@ -780,16 +877,29 @@ a:hover {
         padding: 0 10px;
     }
 
+    .header {
+        padding: 6px 0;
+    }
+
     .logo-img {
-        width: 70px;
+        width: 80px;
+    }
+
+    .carSec__img {
+        width: 50px;
+        bottom: 10px;
+    }
+
+    .carheading {
+        top: 0px;
     }
 
     .carSec__h {
-        font-size: 20px;
+        font-size: 17px;
     }
 
     .carholder {
-        min-height: calc(100vh - 46px);
+        min-height: calc(100vh - 40px);
     }
 
     .carSec {
@@ -824,6 +934,81 @@ a:hover {
     .dot21-img {
         width: 134px;
         right: 6px;
+    }
+
+    .dot2-img {
+        width: 105px;
+    }
+
+    .dot1-img {
+        width: 70px;
+    }
+
+    .dot12-img {
+        width: 76px;
+    }
+
+    .dot13-img {
+        width: 83px;
+    }
+
+    .dot14-img {
+        width: 111px;
+    }
+
+    .dot18-img {
+        width: 100px;
+    }
+
+    .dot21-img {
+        width: 105px;
+    }
+
+    .dot17-img {
+        width: 158px;
+    }
+
+    .dot15-img {
+        width: 82px;
+        left: -25px;
+    }
+
+    .dot3-img {
+        width: 109px;
+    }
+
+    .dot5-img {
+        width: 83px;
+    }
+
+    .dot8-img {
+        width: 92px;
+    }
+
+    .dot9-img {
+        width: 130px;
+        left: 4px;
+    }
+
+    .dot6-img {
+        width: 117px;
+    }
+
+    .dot4-img {
+        width: 115px;
+    }
+
+    .dot10-img {
+        width: 90px;
+        left: -44px;
+    }
+
+    .dot11-img {
+        width: 80px;
+    }
+
+    .dot16-img {
+        width: 110px;
     }
 }
 
@@ -943,5 +1128,35 @@ a:hover {
 
     .dot16-img {
         right: 2px;
+    }
+}
+
+@media(height<=431px) and (orientation: landscape) {
+    .container {
+        max-width: 470px;
+    }
+
+    .carSec__h {
+        font-size: 17px;
+    }
+
+    .carSec__img {
+        width: 50px;
+        bottom: 10px;
+    }
+}
+
+@media(height<=395px) and (orientation: landscape) {
+    .container {
+        max-width: 353px;
+    }
+
+    .carSec__h {
+        font-size: 16px;
+    }
+
+    .dot21-img {
+        width: 115px;
+        right: 6px;
     }
 }
