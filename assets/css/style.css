@@ -1158,7 +1158,7 @@ a:hover {
 
 @media(height<=395px) and (orientation: landscape) {
     .container {
-        max-width: 353px;
+        max-width: 395px;
     }
 
     .carSec__h {
