@@ -4,10 +4,17 @@
     box-sizing: border-box;
 }
 
+html {
+    height: -webkit-fill-available;
+    /* overflow-x: hidden; */
+}
+
 body {
     background-color: #fff;
-    background-color: #77787B;
+    background-color: #77787B !important;
     font-family: 'Figtree', sans-serif;
+    height: -webkit-fill-available;
+    /* overflow-x: hidden; */
 }
 
 h1,
@@ -66,6 +73,7 @@ a:hover {
 
 .header {
     padding: 10px 0 20px 0;
+    background-color: #77787B;
 }
 
 .logo-img {
@@ -73,18 +81,42 @@ a:hover {
     height: auto;
 }
 
+.carholder {
+    min-height: calc(100vh - 72px);
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #77787B;
+}
+
+.carheading {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
 .carSec__h {
-    text-align: center;
-    color: #fff;
-    font-weight: 600;
-    margin-bottom: 20px;
     font-size: 34px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    transform: scale(1);
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.carSec__h.active {
+    /* transform: scale(0); */
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .carSec {
     position: relative;
     z-index: 0;
-    padding: 40px 0 115px 0;
 }
 
 .carSecBox {
@@ -122,6 +154,11 @@ a:hover {
     animation: blink 2s infinite linear alternate-reverse;
 }
 
+.dot--highlight {
+    border-color: #f41b1b;
+}
+
+
 @keyframes blink {
     0% {
         transform: scale(0.3);
@@ -142,6 +179,10 @@ a:hover {
     height: 12px;
     background-color: #fff;
     border-radius: 50%;
+}
+
+.dot--highlight::after {
+    background-color: #f41b1b;
 }
 
 .dot.active {
@@ -278,42 +319,44 @@ a:hover {
     left: 50%;
     height: auto;
     image-rendering: auto;
-    display: none;
+    transform: scale(0);
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .dot.active .dotimg {
-    display: block;
+    transform: scale(1);
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .dot1-img {
-    width: 104px;
+    width: 125px;
     bottom: 100%;
 }
 
 .dot2-img {
-    width: 160px;
+    width: 190px;
     bottom: 100%;
 }
 
 .dot3-img {
-    width: 215px;
+    width: 225px;
     bottom: 100%;
 }
 
 .dot4-img {
-    width: 232px;
+    width: 215px;
     top: 100%;
     left: auto;
     right: 50%;
 }
 
 .dot5-img {
-    width: 170px;
+    width: 180px;
     bottom: 50%;
 }
 
 .dot6-img {
-    width: 250px;
+    width: 260px;
     top: 3%;
     bottom: auto;
     left: 12px;
@@ -341,10 +384,10 @@ a:hover {
 }
 
 .dot10-img {
-    width: 150px;
+    width: 160px;
     bottom: 70%;
     left: auto;
-    right: -205%;
+    right: -60px;
 }
 
 .dot11-img {
@@ -355,14 +398,14 @@ a:hover {
 }
 
 .dot12-img {
-    width: 110px;
+    width: 130px;
     bottom: 70%;
     left: auto;
     right: 0%;
 }
 
 .dot13-img {
-    width: 130px;
+    width: 150px;
     bottom: 70%;
     left: auto;
     right: 50%;
@@ -376,13 +419,13 @@ a:hover {
 }
 
 .dot15-img {
-    width: 150px;
+    width: 158px;
     bottom: 70%;
-    left: -200%;
+    left: -48px;
 }
 
 .dot16-img {
-    width: 205px;
+    width: 220px;
     top: 50%;
     left: auto;
     right: 12px;
@@ -396,7 +439,7 @@ a:hover {
 }
 
 .dot18-img {
-    width: 280px;
+    width: 270px;
     bottom: 50%;
     left: auto;
     right: 12px;
@@ -433,107 +476,40 @@ a:hover {
     position: absolute;
     bottom: 15px;
     left: 15px;
-    z-index: 1;
+    z-index: 9;
     top: auto;
 }
 
-@media(max-width:1399px) {
+@media(width<=1399px) {
     .container {
         max-width: 900px;
     }
 }
 
-@media(max-width:1199px) {
+@media(width<=1199px) {
+    .container {
+        max-width: 800px;
+    }
+
+    .header {
+        padding: 10px 0;
+        background-color: #f41b1b;
+    }
+
+    .logo-img {
+        width: 90px;
+    }
+
+    .carholder {
+        min-height: calc(100vh - 52px);
+    }
+
+    .carSec__h {
+        font-size: 28px;
+    }
+
     .carSec__img {
         width: 100px;
-    }
-
-    .container {
-        max-width: 700px;
-    }
-
-    .dot2-img {
-        width: 157px;
-    }
-
-    .dot1-img {
-        width: 80px;
-    }
-
-    .dot3-img {
-        width: 180px;
-    }
-
-    .dot5-img {
-        width: 140px;
-    }
-
-    .dot6-img {
-        width: 200px;
-    }
-
-    .dot9-img {
-        width: 210px;
-    }
-
-    .dot8-img {
-        width: 142px;
-    }
-
-    .dot15-img {
-        width: 115px;
-    }
-
-    .dot10-img {
-        width: 98px;
-    }
-
-    .dot11-img {
-        width: 97px;
-    }
-
-    .dot12-img {
-        width: 83px;
-    }
-
-    .dot13-img {
-        width: 104px;
-    }
-
-    .dot14-img {
-        width: 140px;
-    }
-
-    .dot18-img {
-        width: 220px;
-    }
-
-    .dot21-img {
-        width: 192px;
-    }
-
-    .dot17-img {
-        width: 220px;
-    }
-
-    .dot19-img {
-        width: 220px;
-    }
-
-    .dot20-img {
-        width: 160px;
-    }
-
-    .dot16-img {
-        width: 150px;
-    }
-
-    .dot7-img {
-        width: 130px;
-    }
-
-    .dot4-img {
-        width: 169px;
     }
 
     .dot {
@@ -546,27 +522,124 @@ a:hover {
         height: 10px;
     }
 
-    .logo-img {
-        width: 90px;
+    .dot1-img {
+        width: 110px;
     }
 
+    .dot2-img {
+        width: 175px;
+        left: 12px;
+    }
+
+    .dot3-img {
+        width: 177px;
+        bottom: 11px;
+    }
+
+    .dot4-img {
+        width: 175px;
+    }
+
+    .dot5-img {
+        width: 126px;
+    }
+
+    .dot6-img {
+        width: 190px;
+    }
+
+    .dot7-img {
+        width: 165px;
+        right: 7px;
+    }
+
+    .dot8-img {
+        width: 150px;
+        left: 7px;
+    }
+
+    .dot9-img {
+        width: 220px;
+        left: 7px;
+    }
+
+    .dot10-img {
+        width: 130px;
+        right: -51px;
+    }
+
+    .dot11-img {
+        width: 120px;
+    }
+
+    .dot12-img {
+        width: 120px;
+    }
+
+    .dot13-img {
+        width: 120px;
+    }
+
+    .dot14-img {
+        width: 165px;
+    }
+
+    .dot15-img {
+        width: 125px;
+        left: -39px;
+    }
+
+    .dot16-img {
+        width: 170px;
+        right: 8px;
+    }
+
+    .dot17-img {
+        width: 260px;
+        right: 8px;
+    }
+
+    .dot18-img {
+        width: 205px;
+    }
+
+    .dot19-img {
+        width: 240px;
+    }
+
+    .dot20-img {
+        width: 180px;
+        right: 7px;
+    }
+
+    .dot21-img {
+        width: 177px;
+    }
+
+}
+
+@media(width<=1199px) and (orientation: portrait) {
     .header {
-        padding: 15px 0 20px 0;
+        background-color: aqua;
     }
 
-    .carSec__h {
-        margin-bottom: 30px;
-        font-size: 30px;
+    .container {
+        max-width: 100%;
+        width: 100%;
     }
 }
 
-@media(max-width:1023px) {
+@media(width<=992px) {
     .carSec__img {
         width: 80px;
     }
 
     .container {
-        max-width: 500px;
+        max-width: 600px;
+    }
+
+    .carSec__h {
+        font-size: 22px;
     }
 
     .dot {
@@ -574,115 +647,164 @@ a:hover {
         height: 12px;
     }
 
+    .header {
+        padding: 10px 0;
+    }
+
+    .carholder {
+        min-height: calc(100vh - 52px);
+    }
+
     .dot::after {
         width: 6px;
         height: 6px;
     }
 
-    .dot15-img {
-        width: 90px;
-        left: -295%;
-    }
-
-    .dot10-img {
-        width: 80px;
-        left: -43px;
-    }
-
     .dot1-img {
-        width: 66px;
+        width: 90px;
     }
 
     .dot2-img {
-        width: 145px;
+        width: 135px;
+        left: 8px;
     }
 
     .dot3-img {
-        width: 148px;
+        width: 142px;
         left: 9px;
-    }
-
-    .dot5-img {
-        width: 116px;
-        left: 9px;
-    }
-
-    .dot6-img {
-        width: 159px;
-    }
-
-    .dot9-img {
-        width: 160px;
-        left: 7px;
-    }
-
-    .dot8-img {
-        width: 111px;
-        left: 6px;
     }
 
     .dot4-img {
-        width: 144px;
+        width: 140px;
+    }
+
+    .dot5-img {
+        width: 106px;
+        left: 5px;
+    }
+
+    .dot6-img {
+        width: 150px;
     }
 
     .dot7-img {
-        width: 101px;
+        width: 125px;
         right: 5px;
     }
 
-    .dot20-img {
-        width: 112px;
-        right: 6px;
+    .dot8-img {
+        width: 122px;
+        left: 6px;
     }
 
-    .dot19-img {
-        width: 174px;
+    .dot9-img {
+        width: 177px;
+        left: 4px;
+    }
+
+    .dot10-img {
+        width: 105px;
+        left: -53px;
+    }
+
+    .dot11-img {
+        width: 90px;
+    }
+
+    .dot12-img {
+        width: 88px;
+    }
+
+    .dot13-img {
+        width: 92px;
+    }
+
+    .dot14-img {
+        width: 125px;
+    }
+
+    .dot15-img {
+        width: 100px;
+        left: -32px;
+    }
+
+    .dot16-img {
+        width: 132px;
         right: 5px;
     }
 
     .dot17-img {
-        width: 170px;
+        width: 190px;
         right: 5px;
-    }
-
-    .dot21-img {
-        width: 140px;
-        right: 6px;
     }
 
     .dot18-img {
         width: 165px;
+        right: 7px;
     }
 
-    .dot16-img {
-        width: 105px;
+    .dot19-img {
+        width: 175px;
+        right: 5px;
     }
 
-    .dot14-img {
-        width: 109px;
+    .dot20-img {
+        width: 130px;
+        right: 4px;
     }
 
-    .dot13-img {
-        width: 86px;
+    .dot21-img {
+        width: 145px;
+        right: 6px;
     }
 
-    .dot12-img {
-        width: 62px;
+}
+
+@media(width<=767px) {
+    .container {
+        max-width: 450px;
+        width: 100%;
+        padding: 0 10px;
     }
 
-    .dot11-img {
-        width: 75px;
+    .logo-img {
+        width: 70px;
+    }
+
+    .carSec__h {
+        font-size: 18px;
+    }
+
+    .carholder {
+        min-height: calc(100vh - 46px);
+    }
+
+    .carSec__img {
+        width: 52px;
+        bottom: 10px;
+    }
+
+    .web {
+        display: none !important;
+    }
+
+    .dot.active .dot1-img {
+        display: block !important;
+    }
+
+    .dot.active .dotimg.mobile {
+        display: block !important;
     }
 }
 
-@media(max-width:767px) {
+@media(max-width:539px) {
     .container {
-        max-width: 320px;
+        max-width: 500px;
+        width: 100%;
         padding: 0 10px;
     }
 
     .carSec__h {
-        margin-bottom: 40px;
         font-size: 20px;
     }
 
@@ -702,18 +824,6 @@ a:hover {
 
     }
 
-
-    .web {
-        display: none !important;
-    }
-
-    .dot.active .dot1-img {
-        display: block !important;
-    }
-
-    .dot.active .dotimg.mobile {
-        display: block !important;
-    }
 
     .dot2-img {
         width: 99px;
@@ -779,50 +889,9 @@ a:hover {
 
     .carSec {
         transform: rotate(90deg);
-        padding: 90px 0;
     }
 
     .dot16-img {
         right: 2px;
-    }
-}
-
-@media (max-width: 740px) and (max-height: 360px) {
-    .carSec {
-        transform: rotate(0deg);
-        padding: 35px 0;
-    }
-
-    .container {
-        max-width: 400px;
-    }
-
-    .header {
-        padding: 5px 0 5px 0;
-    }
-
-    .carSec__h {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 1040px) and (max-height: 560px) {
-    .carSec {
-        transform: rotate(0deg);
-        padding: 35px 0;
-    }
-
-    .container {
-        max-width: 400px;
-    }
-
-    .header {
-        padding: 5px 0 5px 0;
-    }
-
-    .carSec__h {
-        font-size: 18px;
-        margin-bottom: 10px;
     }
 }

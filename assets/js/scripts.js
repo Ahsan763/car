@@ -1,16 +1,13 @@
-var swiper = new Swiper(".bannersl", {
-    pagination: {
-      el: ".bannerslpagi",
-      clickable: true,
-    },
-});
-$(document).ready(function () {
-    $(".aboutrow__btn").click(function () {
-        $(this).toggleClass("active");
-        $(".aboutrow__p").toggleClass("hidden");
-    });
-    $(".aboutrow__btn2").click(function () {
-        $(this).toggleClass("active");
-        $(".ttdiwbox2").toggleClass("active");
-    });
+$(Document).ready(function () {
+  $(".dot").click(function (event) {
+    $(this).prevAll(".dot").removeClass("active");
+    $(this).addClass("active");
+    $(this).nextAll(".dot").removeClass("active");
+    $(".carSec__h").addClass("active");
+    event.stopPropagation();
+  });
+  $("body").click(function () {
+    $(".dot").removeClass("active");
+    $(".carSec__h").removeClass("active");
+  });
 });
