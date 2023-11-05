@@ -1129,6 +1129,11 @@ a:hover {
     .dot16-img {
         right: 2px;
     }
+
+    .dot15-img {
+        width: 73px;
+        left: -19px;
+    }
 }
 
 @media(height<=431px) and (orientation: landscape) {
