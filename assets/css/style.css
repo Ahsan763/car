@@ -110,7 +110,7 @@ a:hover {
 }
 
 .carSec__h.active {
-    /* transform: scale(0); */
+    transform: scale(0);
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
@@ -468,7 +468,8 @@ a:hover {
 }
 
 .mobile {
-    display: none !important;
+    transform: scale(0) !important;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .carSec__img {
@@ -762,7 +763,7 @@ a:hover {
 
 @media(width<=767px) {
     .container {
-        max-width: 450px;
+        max-width: 600px;
         width: 100%;
         padding: 0 10px;
     }
@@ -772,11 +773,15 @@ a:hover {
     }
 
     .carSec__h {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .carholder {
         min-height: calc(100vh - 46px);
+    }
+
+    .carSec {
+        transform: rotate(90deg);
     }
 
     .carSec__img {
@@ -785,27 +790,47 @@ a:hover {
     }
 
     .web {
-        display: none !important;
+        transform: scale(0) !important;
+        transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
     .dot.active .dot1-img {
-        display: block !important;
+        transform: scale(1) !important;
+        transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
     .dot.active .dotimg.mobile {
-        display: block !important;
+        transform: scale(1) !important;
+        transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .dot18-img {
+        width: 130px;
+        right: 7px;
+    }
+
+    .dot21-img {
+        width: 134px;
+        right: 6px;
     }
 }
 
-@media(max-width:539px) {
+@media(max-width:599px) {
     .container {
-        max-width: 500px;
+        max-width: 530px;
         width: 100%;
-        padding: 0 10px;
+    }
+
+    .header {
+        padding: 5px 0;
+    }
+
+    .carholder {
+        min-height: calc(100vh - 36px);
     }
 
     .carSec__h {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .dot {
