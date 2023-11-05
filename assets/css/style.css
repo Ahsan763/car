@@ -1145,6 +1145,11 @@ a:hover {
         font-size: 16px;
     }
 
+    .dot15-img {
+        width: 73px;
+        left: -19px;
+    }
+
     .carSec__img {
         width: 50px;
         bottom: 10px;
@@ -1163,5 +1168,10 @@ a:hover {
     .dot21-img {
         width: 115px;
         right: 6px;
+    }
+
+    .dot15-img {
+        width: 73px;
+        left: -19px;
     }
 }
