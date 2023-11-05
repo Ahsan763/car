@@ -494,7 +494,6 @@ a:hover {
 
     .header {
         padding: 10px 0;
-        background-color: #f41b1b;
     }
 
     .logo-img {
@@ -620,13 +619,14 @@ a:hover {
 }
 
 @media(width<=1199px) and (orientation: portrait) {
-    .header {
-        background-color: aqua;
-    }
 
     .container {
         max-width: 100%;
         width: 100%;
+    }
+
+    .carSec {
+        transform: rotate(90deg);
     }
 }
 
@@ -761,6 +761,18 @@ a:hover {
 
 }
 
+@media(width<=767px) and (orientation: portrait) {
+
+    .container {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .carSec {
+        transform: rotate(90deg);
+    }
+}
+
 @media(width<=767px) {
     .container {
         max-width: 600px;
@@ -812,6 +824,19 @@ a:hover {
     .dot21-img {
         width: 134px;
         right: 6px;
+    }
+}
+
+@media(width<=767px) and (orientation: landscape) {
+
+    .carSec {
+        transform: rotate(0deg);
+    }
+
+    .container {
+        max-width: 450px;
+        width: 100%;
+        padding: 0 10px;
     }
 }
 
