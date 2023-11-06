@@ -106,20 +106,16 @@ a:hover {
 
 .carheading {
     position: absolute;
-    width: 100%;
-    left: -160px;
+    width: fit-content;
     z-index: 3;
     top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: calc(100% - 100px);
+    right: 10px;
 }
 
 .carSec__h {
-    font-size: 34px;
+    font-size: 30px;
     font-weight: 600;
     color: #fff;
-    text-align: center;
     transform: scale(1);
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
     line-height: 1;
@@ -906,14 +902,6 @@ a:hover {
         bottom: 10px;
     }
 
-    .carheading {
-        top: 0px;
-    }
-
-    .carheading {
-        top: -5px;
-    }
-
     .carSec__h {
         font-size: 17px;
     }
@@ -1175,9 +1163,6 @@ a:hover {
         bottom: 10px;
     }
 
-    .carheading {
-        top: -5px;
-    }
 }
 
 @media(height<=395px) and (orientation: landscape) {
