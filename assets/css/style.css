@@ -910,6 +910,10 @@ a:hover {
         top: 0px;
     }
 
+    .carheading {
+        top: -5px;
+    }
+
     .carSec__h {
         font-size: 17px;
     }
@@ -1169,6 +1173,10 @@ a:hover {
     .carSec__img {
         width: 50px;
         bottom: 10px;
+    }
+
+    .carheading {
+        top: -5px;
     }
 }
 
