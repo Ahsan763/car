@@ -72,7 +72,7 @@ a:hover {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -113,7 +113,7 @@ a:hover {
 }
 
 .carSec__h {
-    font-size: 30px;
+    font-size: 27px;
     font-weight: 600;
     color: #fff;
     transform: scale(1);
@@ -341,7 +341,7 @@ a:hover {
 }
 
 .dot1-img {
-    width: 125px;
+    width: 110px;
     bottom: 100%;
 }
 
@@ -369,7 +369,7 @@ a:hover {
 
 .dot6-img {
     width: 260px;
-    top: 3%;
+    top: -8px;
     bottom: auto;
     left: 12px;
 }
@@ -433,7 +433,7 @@ a:hover {
 .dot15-img {
     width: 158px;
     bottom: 70%;
-    left: -48px;
+    left: -61px;
 }
 
 .dot16-img {
