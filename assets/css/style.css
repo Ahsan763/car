@@ -878,7 +878,7 @@ a:hover {
     }
 
     .carSec {
-        transform: rotate(90deg);
+        transform: rotate(0deg);
     }
 }
 
@@ -904,14 +904,6 @@ a:hover {
 
     .carSec__h {
         font-size: 17px;
-    }
-
-    .carholder {
-        /* min-height: calc(100vh - 40px); */
-    }
-
-    .carSec {
-        transform: rotate(90deg);
     }
 
     .carSec__img {
@@ -1020,31 +1012,15 @@ a:hover {
     }
 }
 
-@media(width<=767px) and (orientation: landscape) {
-
-    .carSec {
-        transform: rotate(0deg);
-    }
-
-    .container {
-        max-width: 450px;
-        width: 100%;
-        padding: 0 10px;
-    }
-}
 
 @media(max-width:599px) {
     .container {
-        max-width: 530px;
+        max-width: 450px;
         width: 100%;
     }
 
     .header {
         padding: 5px 0;
-    }
-
-    .carholder {
-        /* min-height: calc(100vh - 36px); */
     }
 
     .carSec__h {
